@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empório Paranaense - Só produtos do Paraná: erva-mate, queijos coloniais, vinhos, cachaças de Morretes, mel, cafés e muito mais, direto de quem produz.">
+    <title>Empório Paranaense | Só o melhor do Paraná</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- EDITÁVEL: Nome do negócio/logo -->
+                <a href="#inicio" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6C22 6 11 12 5 21c7-3 15-4 21-3-9 2-17 8-21 14 9-4 18-5 23-4v30h8V28c5-1 14 0 23 4-4-6-12-12-21-14 6-1 14 0 21 3C53 12 42 6 32 6z" fill="currentColor"/></svg>
+                    <span>Empório <strong>Paranaense</strong></span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#proposito">Nosso propósito</a></li>
+                    <li><a href="#so-parana">Por que só Paraná</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#contato" class="nav-cta">Visite a loja</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <!-- Logo de cara: o que é a loja e o que ela vende -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <!-- EDITÁVEL: Troque pela foto real da fachada ou das prateleiras da loja -->
+            <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1920&q=80" alt="Prateleiras do empório com produtos artesanais" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">100% produtos paranaenses</div>
+                <!-- EDITÁVEL: Título principal -->
+                <h1>O melhor do Paraná, num só lugar.</h1>
+                <!-- EDITÁVEL: Subtítulo -->
+                <p class="hero-subtitle">Erva-mate, queijos coloniais, vinhos, cachaças, mel, cafés especiais e delícias da colônia. Tudo feito aqui no estado, por produtores que a gente conhece pelo nome.</p>
+                <div class="hero-buttons">
+                    <a href="#produtos" class="btn btn-primary">Ver o que vendemos</a>
+                    <!-- EDITÁVEL: Link do WhatsApp -->
+                    <a href="https://wa.me/5541999999999" class="btn btn-secondary" target="_blank">Encomendar no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Faixa com as categorias: o cliente bate o olho e já entende o que tem na loja -->
+        <div class="hero-categorias">
+            <div class="container">
+                <ul class="categorias-lista">
+                    <li><span>🧉</span> Erva-mate</li>
+                    <li><span>🧀</span> Queijos</li>
+                    <li><span>🍷</span> Vinhos</li>
+                    <li><span>🥃</span> Cachaças</li>
+                    <li><span>🍯</span> Mel</li>
+                    <li><span>☕</span> Cafés</li>
+                    <li><span>🥖</span> Pães e cucas</li>
+                    <li><span>🌰</span> Pinhão</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUTOS ========== -->
+    <section class="produtos" id="produtos">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">O que tem na loja</span>
+                <h2>Cada produto tem um endereço no mapa do Paraná</h2>
+                <p>Nas nossas prateleiras, você sabe de onde vem cada coisa e quem fez.</p>
+            </div>
+            <div class="produtos-grid">
+                <!-- EDITÁVEL: Cards de produtos (imagem, nome, origem e descrição) -->
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <!-- EDITÁVEL: Ideal trocar por uma foto real de cuia/chimarrão ou dos pacotes de erva da loja -->
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&q=80" alt="Chá-mate servido no copo">
+                        <span class="produto-origem">São Mateus do Sul</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Erva-mate</h3>
+                        <p>Para chimarrão e tereré, de ervateiras tradicionais da capital da erva-mate.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=500&q=80" alt="Queijos coloniais">
+                        <span class="produto-origem">Campos Gerais</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Queijos coloniais</h3>
+                        <p>Queijos de Witmarsum, Castro e Carambeí, a região mais leiteira do Brasil.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=500&q=80" alt="Vinhos paranaenses">
+                        <span class="produto-origem">Colombo e Bituruna</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Vinhos e sucos de uva</h3>
+                        <p>Vinícolas de família, herança dos imigrantes italianos que se instalaram no Paraná.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&q=80" alt="Cachaça artesanal">
+                        <span class="produto-origem">Morretes e Antonina</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Cachaças e bala de banana</h3>
+                        <p>Alambiques do litoral e a bala de banana que é a cara da Serra do Mar.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&q=80" alt="Mel puro">
+                        <span class="produto-origem">Ortigueira</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Mel e derivados</h3>
+                        <p>Mel puro de apiários da capital nacional do mel, além de própolis e melado.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&q=80" alt="Grãos de café especial">
+                        <span class="produto-origem">Norte Pioneiro</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Cafés especiais</h3>
+                        <p>Grãos premiados de uma região com indicação geográfica, em grão ou moídos na hora.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?w=500&q=80" alt="Tábua de embutidos coloniais">
+                        <span class="produto-origem">Colônias do interior</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Embutidos e conservas</h3>
+                        <p>Salames, copas e linguiças coloniais, conservas e geleias feitas em pequenos lotes.</p>
+                    </div>
+                </article>
+                <article class="produto-card">
+                    <div class="produto-image">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&q=80" alt="Pães artesanais">
+                        <span class="produto-origem">Curitiba e região</span>
+                    </div>
+                    <div class="produto-content">
+                        <h3>Pães, cucas e doces</h3>
+                        <p>Cuca alemã, pierogi, pães de fermentação natural e doces de receitas de família.</p>
+                    </div>
+                </article>
+            </div>
+            <p class="produtos-nota">Também montamos <strong>cestas e kits para presente</strong> com o que você escolher. <a href="https://wa.me/5541999999999" target="_blank">Peça a sua →</a></p>
+        </div>
+    </section>
+
+    <!-- ========== PROPÓSITO / POR QUE "EMPÓRIO PARANAENSE" ========== -->
+    <section class="proposito" id="proposito">
+        <div class="container">
+            <div class="proposito-content">
+                <div class="proposito-image">
+                    <!-- EDITÁVEL: Foto da loja por dentro ou da equipe -->
+                    <img src="https://images.unsplash.com/photo-1452251889946-8ff5ea7b27ab?w=700&q=80" alt="Tábua com queijos, pães e conservas">
+                </div>
+                <div class="proposito-info">
+                    <span class="eyebrow">Nosso propósito</span>
+                    <h2>Por que “Empório Paranaense”?</h2>
+                    <!-- EDITÁVEL: Texto sobre o propósito -->
+                    <p class="destaque-texto">Porque o Paraná tem sabor próprio, e ele merecia uma casa.</p>
+                    <p><strong>Empório</strong> é a venda de antigamente: balcão, prateleira cheia e alguém que conhece cada produto e te ajuda a escolher. <strong>Paranaense</strong> é o que vai nelas, sem exceção.</p>
+                    <p>Nosso propósito é aproximar quem produz de quem consome e mostrar que o que é feito aqui no estado está entre o que de melhor se faz no país.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== POR QUE SÓ PRODUTOS PARANAENSES ========== -->
+    <section class="so-parana" id="so-parana">
+        <div class="so-parana-bg">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=70" alt="" aria-hidden="true">
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">A nossa regra</span>
+                <h2>Por que só vendemos produtos paranaenses?</h2>
+                <p>Não é marketing. É uma escolha que muda o que chega na sua mesa.</p>
+            </div>
+            <div class="motivos-grid">
+                <div class="motivo-card">
+                    <span class="motivo-numero">01</span>
+                    <h3>A gente conhece quem faz</h3>
+                    <p>Visitamos cada produtor. Sabemos como o queijo é curado, de onde vem a erva e quem destila a cachaça.</p>
+                </div>
+                <div class="motivo-card">
+                    <span class="motivo-numero">02</span>
+                    <h3>O dinheiro fica aqui</h3>
+                    <p>Cada compra sustenta pequenos produtores, agroindústrias familiares e cooperativas do estado.</p>
+                </div>
+                <div class="motivo-card">
+                    <span class="motivo-numero">03</span>
+                    <h3>Mais fresco, menos estrada</h3>
+                    <p>Produto que viaja menos chega mais fresco, com menos intermediários e preço justo.</p>
+                </div>
+                <div class="motivo-card">
+                    <span class="motivo-numero">04</span>
+                    <h3>Cultura que se come</h3>
+                    <p>Polacos, ucranianos, italianos, alemães, tropeiros e caiçaras: o Paraná é feito de muitos sotaques, e cada um tem a sua receita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HISTÓRIA ========== -->
+    <section class="historia" id="historia">
+        <div class="container">
+            <div class="historia-content">
+                <div class="historia-info">
+                    <span class="eyebrow">Um pouquinho da nossa história</span>
+                    <h2>Começou com uma pergunta</h2>
+                    <!-- EDITÁVEL: História real da loja (ano, fundadores, como começou) -->
+                    <p>Por que era tão difícil encontrar, num lugar só, o melhor que o Paraná produz? O queijo bom estava em Witmarsum, o vinho em Colombo, a cachaça em Morretes, o café lá no Norte Pioneiro.</p>
+                    <p>Então pegamos a estrada. Visitamos sítios, alambiques, ervateiras e cozinhas de colônia, e trouxemos para Curitiba os produtos e as histórias de quem faz.</p>
+                    <p>Hoje o Empório reúne <strong>produtores de todas as regiões do estado</strong>, e a regra continua a mesma do primeiro dia: se não é do Paraná, não entra na prateleira.</p>
+                    <div class="historia-assinatura">
+                        <!-- EDITÁVEL: Nome dos fundadores -->
+                        <span>Família Empório Paranaense</span>
+                    </div>
+                </div>
+                <div class="historia-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=700&q=80" alt="Paisagem de campo com neblina">
+                    <div class="historia-selo">
+                        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6C22 6 11 12 5 21c7-3 15-4 21-3-9 2-17 8-21 14 9-4 18-5 23-4v30h8V28c5-1 14 0 23 4-4-6-12-12-21-14 6-1 14 0 21 3C53 12 42 6 32 6z" fill="currentColor"/></svg>
+                        <span>Feito no<br>Paraná</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Venha provar</span>
+                <h2>Visite o Empório</h2>
+                <p>Passe para um café, prove um queijo e leve um pedaço do Paraná para casa.</p>
+            </div>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <!-- EDITÁVEL: Informações de contato -->
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua Exemplo, 123 - Bairro<br>Curitiba - PR</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Segunda a sábado: 9h às 19h<br>Domingo: 9h às 13h</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📱</div>
+                        <div>
+                            <h4>WhatsApp e encomendas</h4>
+                            <p>(41) 99999-9999</p>
+                            <a href="https://wa.me/5541999999999" class="btn btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-mapa">
+                    <!-- EDITÁVEL: Troque "Curitiba PR" pelo endereço da loja -->
+                    <iframe src="https://www.google.com/maps?q=Curitiba+PR&output=embed" loading="lazy" title="Mapa do Empório Paranaense" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ÁREA RESERVADA PARA AGENTE DE IA ========== -->
+    <div id="ai-agent-container" class="ai-agent-area">
+        <!-- O widget do agente de IA será inserido aqui -->
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="logo-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6C22 6 11 12 5 21c7-3 15-4 21-3-9 2-17 8-21 14 9-4 18-5 23-4v30h8V28c5-1 14 0 23 4-4-6-12-12-21-14 6-1 14 0 21 3C53 12 42 6 32 6z" fill="currentColor"/></svg>
+                    Empório Paranaense
+                </div>
+                <p>Só o melhor do Paraná, direto de quem faz.</p>
+                <div class="footer-links">
+                    <a href="#produtos">Produtos</a>
+                    <a href="#proposito">Propósito</a>
+                    <a href="#so-parana">Por que só Paraná</a>
+                    <a href="#historia">História</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <!-- EDITÁVEL: Links das redes sociais -->
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+                    <a href="https://wa.me/5541999999999" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Empório Paranaense. Todos os direitos reservados.</p>
+                <p><a href="#privacidade">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Política de Privacidade (texto simples no rodapé) -->
+    <section class="privacidade" id="privacidade">
+        <div class="container">
+            <h3>Política de Privacidade</h3>
+            <p>O Empório Paranaense respeita sua privacidade. Os dados coletados são utilizados apenas para processamento de pedidos e comunicação com clientes. Não compartilhamos informações pessoais com terceiros sem consentimento.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

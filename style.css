@@ -1,0 +1,883 @@
+/* ========== VARIÁVEIS CSS ========== */
+/* EDITÁVEL: Cores principais do tema (verde araucária, mostarda e creme) */
+:root {
+    --primary: #1f4a32;
+    --primary-dark: #14321f;
+    --secondary: #c8902e;
+    --accent: #e9b949;
+    --terra: #a4532c;
+    --bg: #f7f1e5;
+    --bg-alt: #efe5d2;
+    --text: #22261f;
+    --text-light: #5a5e52;
+    --white: #ffffff;
+    --font-title: 'Fraunces', Georgia, serif;
+    --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --shadow: 0 4px 20px rgba(34, 38, 31, 0.08);
+    --shadow-hover: 0 10px 30px rgba(34, 38, 31, 0.15);
+    --radius: 14px;
+    --radius-sm: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* ========== RESET E BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== TIPOGRAFIA ========== */
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--text);
+}
+
+h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Pequeno rótulo acima dos títulos */
+.eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 12px;
+}
+
+/* ========== BOTÕES ========== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: var(--white);
+    margin-top: 10px;
+    padding: 12px 22px;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+}
+
+/* ========== HEADER ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 18px 0;
+    transition: var(--transition);
+}
+
+/* Header ganha fundo quando a página é rolada (classe aplicada via JS) */
+.header.scrolled {
+    background: rgba(20, 50, 31, 0.96);
+    backdrop-filter: blur(8px);
+    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.logo strong {
+    font-weight: 800;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+.nav-menu .nav-cta {
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.nav-menu .nav-cta:hover {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+/* ========== HERO ========== */
+.hero {
+    min-height: 100vh;
+    padding: 150px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay escuro para legibilidade do texto */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(20, 50, 31, 0.95) 0%, rgba(20, 50, 31, 0.75) 50%, rgba(20, 50, 31, 0.35) 100%);
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 640px;
+    padding-bottom: 60px;
+}
+
+.hero-badge {
+    display: inline-block;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Faixa de categorias no rodapé do hero */
+.hero-categorias {
+    position: relative;
+    z-index: 1;
+    background: var(--bg);
+    padding: 22px 0;
+}
+
+.categorias-lista {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.categorias-lista::-webkit-scrollbar {
+    display: none;
+}
+
+.categorias-lista li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.categorias-lista span {
+    font-size: 1.4rem;
+}
+
+/* ========== SEÇÕES GERAIS ========== */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 56px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+}
+
+/* ========== PRODUTOS ========== */
+.produtos {
+    background: var(--bg);
+    padding-top: 80px;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.produto-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.produto-image {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+}
+
+.produto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.produto-card:hover .produto-image img {
+    transform: scale(1.08);
+}
+
+/* Etiqueta com a cidade/região de origem */
+.produto-origem {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background: rgba(20, 50, 31, 0.9);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.produto-origem::before {
+    content: '📍 ';
+}
+
+.produto-content {
+    padding: 20px 22px 24px;
+}
+
+.produto-content p {
+    font-size: 0.93rem;
+    margin: 0;
+}
+
+.produtos-nota {
+    text-align: center;
+    margin: 48px 0 0;
+    font-size: 1.05rem;
+}
+
+.produtos-nota a {
+    color: var(--terra);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ========== PROPÓSITO ========== */
+.proposito {
+    background: var(--white);
+}
+
+.proposito-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.proposito-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--shadow-hover);
+}
+
+.proposito-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destaque-texto {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    line-height: 1.35;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 18px;
+    margin: 10px 0 24px;
+}
+
+.proposito-info p {
+    font-size: 1.08rem;
+}
+
+/* ========== POR QUE SÓ PARANÁ ========== */
+.so-parana {
+    position: relative;
+    background: var(--primary-dark);
+    overflow: hidden;
+}
+
+.so-parana-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+}
+
+.so-parana-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.so-parana .container {
+    position: relative;
+}
+
+.so-parana .section-header h2 {
+    color: var(--white);
+}
+
+.so-parana .section-header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.motivos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.motivo-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    transition: var(--transition);
+}
+
+.motivo-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+}
+
+.motivo-numero {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.motivo-card h3 {
+    color: var(--white);
+}
+
+.motivo-card p {
+    color: rgba(255, 255, 255, 0.78);
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ========== HISTÓRIA ========== */
+.historia {
+    background: var(--bg-alt);
+}
+
+.historia-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.historia-info p {
+    font-size: 1.08rem;
+}
+
+.historia-assinatura {
+    margin-top: 28px;
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--terra);
+}
+
+.historia-assinatura::before {
+    content: '— ';
+}
+
+.historia-image {
+    position: relative;
+}
+
+.historia-image img {
+    border-radius: var(--radius);
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    box-shadow: var(--shadow-hover);
+}
+
+/* Selo circular "Feito no Paraná" */
+.historia-selo {
+    position: absolute;
+    left: -30px;
+    bottom: 40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--primary-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.1;
+    box-shadow: var(--shadow-hover);
+    transform: rotate(-8deg);
+}
+
+.historia-selo svg {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 4px;
+    color: var(--primary);
+}
+
+/* ========== CONTATO ========== */
+.contato {
+    background: var(--bg);
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 1.6rem;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    margin-bottom: 4px;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.contato-mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    border: 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* ========== ÁREA AGENTE IA ========== */
+.ai-agent-area {
+    min-height: 0;
+    padding: 0;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 30px;
+    margin-bottom: 20px;
+}
+
+.footer-links a,
+.footer-social a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+}
+
+.footer-social a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+/* ========== POLÍTICA DE PRIVACIDADE ========== */
+.privacidade {
+    background: #0d2215;
+    padding: 40px 0;
+}
+
+.privacidade h3 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.privacidade p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 1100px) {
+    .produtos-grid,
+    .motivos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .proposito-content,
+    .historia-content,
+    .contato-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .proposito-image,
+    .historia-image img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .historia-selo {
+        left: auto;
+        right: 16px;
+        bottom: -30px;
+        width: 110px;
+        height: 110px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 860px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 90px 30px 30px;
+        background: var(--primary-dark);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        box-shadow: var(--shadow);
+        transform: translateY(-110%);
+        transition: var(--transition);
+        z-index: -1;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(20, 50, 31, 0.9) 0%, rgba(20, 50, 31, 0.8) 100%);
+    }
+
+    .categorias-lista {
+        justify-content: flex-start;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .produtos-grid,
+    .motivos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
